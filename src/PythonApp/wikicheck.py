@@ -6,7 +6,7 @@ def getFromWiki(word):
     try:
         page = wikipedia.page(word)
     except wikipedia.exceptions.DisambiguationError as e:
-        return list(e.options)
+        return str(e.options)
     except:
         return -1
     stuff=page.summary

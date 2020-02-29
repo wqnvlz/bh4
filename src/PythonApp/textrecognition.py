@@ -12,6 +12,7 @@ stopwords = stopwords.words('english')
 from py_thesaurus import Thesaurus
 import wikicheck
 
+
 def similarityScore(strlist, keywordlist):
     threshold = 0.5
     score = 0
