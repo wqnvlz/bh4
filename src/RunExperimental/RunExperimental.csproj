@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>TheLosers.BH4.RunExperimental</AssemblyName>
+    <RootNamespace>TheLosers.BH4.RunExperimental</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp.csproj" />
+  </ItemGroup>
+
+</Project>

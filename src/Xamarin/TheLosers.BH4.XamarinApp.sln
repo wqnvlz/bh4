@@ -7,7 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLosers.BH4.XamarinApp", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLosers.BH4.XamarinFormsApp.Android", "TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp.Android\TheLosers.BH4.XamarinFormsApp.Android.csproj", "{F1E137EE-4AC3-4E56-AE25-463DF28FCA78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLosers.BH4.XamarinFormsApp", "TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp.csproj", "{6468D54F-69A2-4A1D-91E9-CB675589A065}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLosers.BH4.XamarinFormsApp", "TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp.csproj", "{6468D54F-69A2-4A1D-91E9-CB675589A065}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonApp", "..\PythonApp\PythonApp.pyproj", "{3FE61F4B-5D8D-41BD-BECD-4EC81A3FF5F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunExperimental", "..\RunExperimental\RunExperimental.csproj", "{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,12 @@ Global
 		{6468D54F-69A2-4A1D-91E9-CB675589A065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6468D54F-69A2-4A1D-91E9-CB675589A065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6468D54F-69A2-4A1D-91E9-CB675589A065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FE61F4B-5D8D-41BD-BECD-4EC81A3FF5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE61F4B-5D8D-41BD-BECD-4EC81A3FF5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
