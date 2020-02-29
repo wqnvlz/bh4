@@ -10,6 +10,7 @@ from nltk.corpus import wordnet
 from nltk.corpus import stopwords
 stopwords = stopwords.words('english')
 from py_thesaurus import Thesaurus
+import wikicheck
 
 def similarityScore(strlist, keywordlist):
     threshold = 0.5
@@ -41,6 +42,7 @@ def similarityScores(str, keywordlists):
             whichindex = keywordlistindex
     return whichindex
 
+
 def enrich(keywords):
     newkeywords = keywords.copy()
 
@@ -61,25 +63,16 @@ def enrich(keywords):
     return newkeywords
 
 
-#print(enrich(["Literature", "Style", "Essay"]))
+def getSubject(subjects, relatedterms):
+    cap = getCap()
+    str = "Developing Efficient Algorithms Quiz Review "
 
-str = "Developing Efficient Algorithms Quiz Review "
-keywordslist = [["Literature", "Style", "Essay"], ["algorithms", "efficiency", "Big-O"], ["Inhibit", "Zero", "Cells", "Coronavirus", "genetics"]]
-#keywordslist = [keywords for keywords in keywordslist]
-keywordslist = [enrich(keywords) for keywords in keywordslist]
-subjects = ["English", "Computer Science", "Biology", "Unknown"]
-#print(subjects[similarityScores("nil die", keywordslist)])
+    width = 640
+    height = 480
 
+    #period is time between checks
+    period = 20
 
-cap = cv2.VideoCapture(1)
-width = 640
-height = 480
-
-#period is time between checks
-period = 50
-
-
-while(True):
     scores = [0 for subject in subjects]
 
     for checks in range(5):
@@ -91,15 +84,41 @@ while(True):
     
         cv2.imshow('frame', gray)
 #        print(text)
-        score = similarityScores(text, keywordslist)
+        score = similarityScores(text, relatedterms)
         scores[score] = scores[score] + 1
     
-    print(subjects[scores.index(max(scores))])
+    return subjects[scores.index(max(scores))]
+
     
-    if cv2.waitKey(1) and 0xFF == ord('q'):
-        break
+def startCap():
+    global cap
+    cap = cv2.VideoCapture(1)
 
-cap.release()
-cv2.destroyAllWindows()
+def getCap():
+    return cap
 
-ap = argparse
+
+#testing
+"""
+subjects = ["Biology", "Computer Science", "Things Fall Apart", "Unknown"]
+
+customInput = True
+if customInput:
+    keywordslistsgiven = [["Literature", "Style", "Essay"], ["algorithms", "efficiency", "Big-O"], ["Inhibit", "Zero", "Cells", "Coronavirus", "genetics"]]
+    keywordslists = [enrich(keywordslist) for keywordslist in keywordslistsgiven]
+
+else:
+    keywordslists = [wikicheck.getFromWiki(subject) for subject in subjects[0:(len(subjects)-1)]]
+
+print("start tests")
+for lista in keywordslists:
+    print(lista)
+    print()
+print("end tests")
+
+startCap()
+while True:
+    print(getSubject(subjects, keywordslists))
+
+"""
+
