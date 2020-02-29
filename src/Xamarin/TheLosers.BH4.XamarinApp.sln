@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunExperimental", "..\RunEx
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BH4.WindowsFormsApp", "BH4.WindowsFormsApp\BH4.WindowsFormsApp.csproj", "{423D48D3-044D-461B-A305-E3F1840CD362}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PythonBinder", "..\PythonBinder\PythonBinder\PythonBinder.csproj", "{0E0C1F1F-D251-4ADD-BBFE-D17961A82686}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +23,14 @@ Global
 		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423D48D3-044D-461B-A305-E3F1840CD362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423D48D3-044D-461B-A305-E3F1840CD362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423D48D3-044D-461B-A305-E3F1840CD362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423D48D3-044D-461B-A305-E3F1840CD362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0C1F1F-D251-4ADD-BBFE-D17961A82686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0C1F1F-D251-4ADD-BBFE-D17961A82686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0C1F1F-D251-4ADD-BBFE-D17961A82686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0C1F1F-D251-4ADD-BBFE-D17961A82686}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

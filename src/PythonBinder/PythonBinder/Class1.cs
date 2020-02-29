@@ -1,17 +1,13 @@
-﻿using IronPython.Hosting;
-
-using Microsoft.Scripting.Hosting;
-
-namespace PythonBinder
+﻿namespace PythonBinder
 {
     public static class Class1
     {
         public static void Main()
         {
-            ScriptEngine engine = Python.CreateEngine();
-            ScriptScope scope = engine.CreateScope();
-            engine.ExecuteFile(@"client", scope);
-            //dynamic testFunction = scope.GetVariable("test_func");
+            //ScriptEngine engine = Python.CreateEngine();
+            //ScriptScope scope = engine.CreateScope();
+            //engine.ExecuteFile(@"client", scope);
+            ////dynamic testFunction = scope.GetVariable("test_func");
         }
     }
 }

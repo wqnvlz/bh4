@@ -22,12 +22,12 @@ UltraSonicDistanceSensor distanceSensor{TRIGGER_PIN, ECHO_PIN};
  * PPPPP: Position to place carriage at
  */
 
-const byte MOTOR_FIRST{7};
+const byte MOTOR_FIRST{8};
 const byte MOTOR_COUNT{2};
 
 const double CAR_BASE_POS{10};
 const double CAR_DIST_PER_POS{5};
-const double CAR_POS_TOLERANCE{1};
+const double CAR_POS_TOLERANCE{2};
 int carTargetPosIndex{0};
 
 class Motor {
@@ -57,7 +57,7 @@ class Motor {
 
 const byte CAR_MOTOR_COUNT{1};
 const Motor CAR_MOTORS[CAR_MOTOR_COUNT]{{
-  Motor{5, 6},
+  Motor{6,5},
 }};
 
 constexpr byte getPin(byte motorIndex) {
@@ -77,7 +77,7 @@ void loop() {
   //unsigned long curTime{millis()};
   
   while (Serial.available()) {
-    delay(1);
+    delay(100);
     int raw{Serial.read()};
     int type = raw & B11100000;
 
@@ -112,13 +112,13 @@ void loop() {
     const Motor& motor{CAR_MOTORS[i]};
     
     double currentPos{distanceSensor.measureDistanceCm()};
-    Serial.println(currentPos);
+//    Serial.println(currentPos);
     double carTargetPosDist{CAR_BASE_POS + carTargetPosIndex * CAR_DIST_PER_POS};
-    double err{currentPos - carTargetPosDist};
+    double err{currentPos - carTargetPosDist}; 
     
     if (abs(err) < CAR_POS_TOLERANCE) {
       motor.off();
-    }   else if (err > 0) {
+    }  else if (err > 0 || currentPos == -1.0) {
       motor.backwards();
     } else {
       motor.forwards();
