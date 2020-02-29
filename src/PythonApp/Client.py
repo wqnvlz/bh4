@@ -25,7 +25,7 @@ while True:
 		print('Server closed connection')
 		break
 
-	receivedStr = str(receivedBytes, ENCODING)
+	receivedStr = receivedBytes.decode()
 	print('Received:' + receivedStr)
 	
 	conn.send(bytes(process(conn, receivedStr), ENCODING))

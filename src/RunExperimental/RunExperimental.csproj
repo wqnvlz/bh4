@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Xamarin\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp.csproj" />
   </ItemGroup>
 

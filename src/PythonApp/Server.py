@@ -8,7 +8,7 @@ while True:
 	command = input('Enter your command: ')
 	s.send(bytes(command, ENCODING)) # Existing connection forcibly closed if client closed
 	receivedBytes : bytes = s.recv(1024)
-	receivedString = str(receivedBytes, ENCODING)
+	receivedString = receivedBytes.decode()
 	if receivedString == 'Terminate':
 		break
 	print(receivedString)
