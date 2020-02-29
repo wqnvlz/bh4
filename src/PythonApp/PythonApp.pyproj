@@ -28,6 +28,9 @@
     <Compile Include="client.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="textrecognition.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server.py" />
     <Compile Include="ultrasonic.py" />
   </ItemGroup>
