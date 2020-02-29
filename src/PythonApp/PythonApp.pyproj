@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3fe61f4b-5d8d-41bd-becd-4ec81a3ff5f7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>client.py</StartupFile>
+    <StartupFile>textrecognition.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
