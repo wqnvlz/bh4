@@ -17,5 +17,10 @@ namespace TheLosers.BH4.XamarinFormsApp
         {
             InitializeComponent();
         }
+
+        private void StartButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Page1());
+        }
     }
 }

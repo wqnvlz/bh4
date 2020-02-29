@@ -6,20 +6,26 @@
              mc:Ignorable="d"
              x:Class="TheLosers.BH4.XamarinFormsApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <StackLayout VerticalOptions="FillAndExpand">
-            <Label Text="Cool App" FontSize="65"
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Place new controls here -->
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Label Text="Cool App" FontSize="65"
            HorizontalOptions="Center" Padding="0,75,0,0"/>
-        </StackLayout>
-       
+            </StackLayout>
 
-        <Button HorizontalOptions="CenterAndExpand"
+
+            <Button HorizontalOptions="CenterAndExpand"
                 Text="Start"
                 VerticalOptions="CenterAndExpand"
                 WidthRequest="200"
                 HeightRequest="50" Padding="0"
-                AnchorX="50"/>
-    </StackLayout>
+                AnchorX="50"
+                x:Name="StartButton"
+                Clicked="StartButton_Clicked"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+    
 
 </ContentPage>

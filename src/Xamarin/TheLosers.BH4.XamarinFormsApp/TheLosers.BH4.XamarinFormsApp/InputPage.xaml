@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TheLosers.BH4.XamarinFormsApp.Page1">
+    <ContentPage.Content>
+        <StackLayout Margin="0, 45, 0, 0">
+            <StackLayout>
+                <Label Text="Enter your four categories: "
+                VerticalOptions="Start" Padding="0,70,0,0"
+                   FontSize="25"
+                   TextColor="Black"
+                HorizontalOptions="StartAndExpand" Margin="22,0,0,0" />
+
+                <Entry x:Name="BinInput1" 
+                   Placeholder="Bin 1" 
+                       ClearButtonVisibility="WhileEditing" Margin="25,20,95,0"/>
+                <Entry x:Name="BinInput1" 
+                   Placeholder="Bin 1" 
+                       ClearButtonVisibility="WhileEditing" Margin="25,0,95,0"/>
+                <Entry x:Name="BinInput1" 
+                   Placeholder="Bin 1" 
+                       ClearButtonVisibility="WhileEditing" Margin="25,0,95,0"/>
+                <Entry x:Name="BinInput1" 
+                   Placeholder="Bin 1" 
+                       ClearButtonVisibility="WhileEditing" Margin="25,0,95,0"/>
+            </StackLayout>
+
+            <Button x:Name="InputSubmitButtom" Text="Submit" Margin="0,70,0,0"
+                    Clicked="InputSubmitButtom_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

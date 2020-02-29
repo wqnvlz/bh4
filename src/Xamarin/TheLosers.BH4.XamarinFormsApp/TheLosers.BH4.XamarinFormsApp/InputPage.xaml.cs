@@ -16,5 +16,10 @@ namespace TheLosers.BH4.XamarinFormsApp
         {
             InitializeComponent();
         }
+
+        private void InputSubmitButtom_Clicked(object sender, EventArgs e)
+        {
+            // TODO: Running your program if 
+        }
     }
 }
