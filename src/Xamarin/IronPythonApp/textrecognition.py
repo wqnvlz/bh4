@@ -47,6 +47,7 @@ def similarityScores(str, keywordlists):
 def enrich(keywords):
     newkeywords = keywords.copy()
 
+
     for keyword in keywords:
         synonyms = [] 
 #        antonyms = [] 
@@ -72,28 +73,22 @@ def getSubject(subjects, relatedterms):
 
     #period is time between checks
     period = 20
-    numchecks = 5
-    
-    while True:
-        scores = [0 for subject in subjects]
-        for checks in range(numchecks):
-            cv2.waitKey(period)
-            ret, frame = cap.read()
-            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    scores = [0 for subject in subjects]
+
+    for checks in range(5):
+        cv2.waitKey(period)
+        ret, frame = cap.read()
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         
-            text = pytesseract.image_to_string(gray)
-            if len(text.strip()) == 0:
-                #print("failed")
-                break
-            cv2.imshow('frame', gray)
-    #        print(text)
-            score = similarityScores(text, relatedterms)
-            scores[score] = scores[score] + 1
-        maxScore = max(scores)
-        if maxScore >= (numchecks+1)/2:
-            return scores.index(max(scores))
-        else:
-            continue
+        text = pytesseract.image_to_string(gray)
+    
+        cv2.imshow('frame', gray)
+#        print(text)
+        score = similarityScores(text, relatedterms)
+        scores[score] = scores[score] + 1
+    
+    return subjects[scores.index(max(scores))]
 
     
 def startCap():
@@ -106,7 +101,7 @@ def getCap():
 
 #testing
 """
-subjects = ["English", "Computer Science", "Biology", "Unknown"]
+subjects = ["Biology", "Computer Science", "Things Fall Apart", "Unknown"]
 
 customInput = True
 if customInput:
@@ -125,6 +120,6 @@ print("end tests")
 startCap()
 while True:
     print(getSubject(subjects, keywordslists))
-"""
 
+"""
 

@@ -1,0 +1,6 @@
+HOST = "localhost"
+PORT = 42
+ENCODING = "utf-16"
+US_TRIGGER = 17
+US_ECHO = 18
+US_UNUSED = 19

@@ -2,16 +2,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3fe61f4b-5d8d-41bd-becd-4ec81a3ff5f7</ProjectGuid>
+    <ProjectGuid>c82ae96d-65e6-4bd2-a268-c341150fcf3d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>run.py</StartupFile>
+    <StartupFile>IronPythonApp.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
+    <InterpreterId>IronPython|2.7-32</InterpreterId>
+    <LaunchProvider>IronPython (.NET) launcher</LaunchProvider>
     <OutputPath>.</OutputPath>
-    <Name>PythonApp</Name>
-    <RootNamespace>PythonApp</RootNamespace>
-    <InterpreterId>CondaEnv|CondaEnv|bh4</InterpreterId>
+    <Name>IronPythonApp</Name>
+    <RootNamespace>IronPythonApp</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,30 +23,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="arduino_comms.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="client.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="run.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="wikicheck.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="textrecognition.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="server.py" />
-    <Compile Include="ultrasonic.py" />
+    <None Include="IronPythonApp.py" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="constants.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterpreterReference Include="CondaEnv|CondaEnv|bh4" />
-    <InterpreterReference Include="Global|PythonCore|3.7" />
+    <InterpreterReference Include="IronPython|2.7-32" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
