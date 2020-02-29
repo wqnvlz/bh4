@@ -4,14 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3fe61f4b-5d8d-41bd-becd-4ec81a3ff5f7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>textrecognition.py</StartupFile>
+    <StartupFile>arduino_comms.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonApp</Name>
     <RootNamespace>PythonApp</RootNamespace>
-    <InterpreterId>CondaEnv|CondaEnv|bh4</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="arduino_comms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="client.py">
       <SubType>Code</SubType>
     </Compile>
@@ -35,7 +38,7 @@
     <Content Include="constants.py" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="CondaEnv|CondaEnv|bh4" />
+    <InterpreterReference Include="Global|PythonCore|3.7" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
