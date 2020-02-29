@@ -10,7 +10,7 @@ namespace TheLosers.BH4.XamarinApp
     {
         public const string HOST = "127.0.0.1";
         public const int PORT = 42;
-        private const string ENCODING = "utf-16";
+        public const string ENCODING = "utf-16";
 
         public static void RunClient(string host, int port, Func<Socket, string, string> processReceived, CancellationToken ct)
         {
@@ -64,12 +64,17 @@ namespace TheLosers.BH4.XamarinApp
 
             while (true)
             {
+                ct.ThrowIfCancellationRequested();
+
                 string command = supplier();
                 s.Send(Encoding.GetEncoding(ENCODING).GetBytes(command));
+
                 byte[] receivedBytes = new byte[1024];
                 int receivedLength = s.Receive(receivedBytes);
                 string receivedString = Encoding.GetEncoding(ENCODING).GetString(receivedBytes, 0, receivedLength);
+
                 if (receivedString == "Terminate") break;
+
                 Console.WriteLine(receivedString);
             }
         }
