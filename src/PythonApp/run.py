@@ -5,7 +5,6 @@ import textrecognition
 #import server
 #import ultrasonic
 
-#if relatedterms list is blank, we use dictionary
 def start(subjects, relatedterms):
     if len(relatedterms) == 0:
         relatedterms = [wikicheck.getFromWiki(subject) for subject in subjects[0:(len(subjects)-1)]]
@@ -18,7 +17,22 @@ def start(subjects, relatedterms):
         #category is the number, subject is the name
         whichcategory = textrecognition.getSubject(subjects, relatedterms)
         print(subjects[whichcategory])
+    return subjects[whichcategory]
 
-subjects = ["English", "Computer Science", "Biology", "Unknown"]
-relatedterms = [["Literature", "Style", "Essay"], ["algorithms", "efficiency", "Big-O"], ["Inhibit", "Zero", "Cells", "Coronavirus", "genetics"]]
-start(subjects, relatedterms)
+
+
+#subjects is 3 things, related terms is two (because one subject is unknown)
+def run(subjects,relatedTerms):
+    try:
+        ppop={
+            subjects[0]:0,
+            subjects[1]:1,
+            subjects[2]:2
+        }
+        cat=start(subjects,relatedTerms)
+        num=ppop[cat]
+        arduino_comms.runProcedure(num)
+        return True
+    except:
+        return False
+
