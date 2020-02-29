@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>PythonApp</Name>
     <RootNamespace>PythonApp</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|bh4</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,11 +25,17 @@
     <Compile Include="client.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="textrecognition.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server.py" />
     <Compile Include="ultrasonic.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="constants.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|bh4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
