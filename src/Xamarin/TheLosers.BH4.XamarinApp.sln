@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLosers.BH4.XamarinApp", "TheLosers.BH4.XamarinApp\TheLosers.BH4.XamarinApp.csproj", "{3ED3D9BB-93A1-4560-834C-5F12967778B6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLosers.BH4.XamarinFormsApp.Android", "TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp.Android\TheLosers.BH4.XamarinFormsApp.Android.csproj", "{F1E137EE-4AC3-4E56-AE25-463DF28FCA78}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheLosers.BH4.XamarinFormsApp", "TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp.csproj", "{6468D54F-69A2-4A1D-91E9-CB675589A065}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonApp", "..\PythonApp\PythonApp.pyproj", "{3FE61F4B-5D8D-41BD-BECD-4EC81A3FF5F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunExperimental", "..\RunExperimental\RunExperimental.csproj", "{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunExperimental", "..\RunExperimental\RunExperimental.csproj", "{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythonBinder", "..\PythonBinder\PythonBinder\PythonBinder.csproj", "{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3ED3D9BB-93A1-4560-834C-5F12967778B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3ED3D9BB-93A1-4560-834C-5F12967778B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3ED3D9BB-93A1-4560-834C-5F12967778B6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{3ED3D9BB-93A1-4560-834C-5F12967778B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3ED3D9BB-93A1-4560-834C-5F12967778B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3ED3D9BB-93A1-4560-834C-5F12967778B6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{F1E137EE-4AC3-4E56-AE25-463DF28FCA78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1E137EE-4AC3-4E56-AE25-463DF28FCA78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E137EE-4AC3-4E56-AE25-463DF28FCA78}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -41,6 +35,10 @@ Global
 		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EF9C662-B0F8-42B2-9C80-CFB0FFC692B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77319AB4-F6C6-4F45-B3E8-33B8633E4AEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

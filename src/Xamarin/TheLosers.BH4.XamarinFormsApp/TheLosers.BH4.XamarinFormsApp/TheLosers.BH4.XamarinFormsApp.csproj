@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\PythonBinder\PythonxBinder\PythonBinder.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="InputPage.xaml.cs">
       <DependentUpon>InputPage.xaml</DependentUpon>
     </Compile>

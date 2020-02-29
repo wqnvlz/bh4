@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <AssemblyName>TheLosers.BH4.RunExperimental</AssemblyName>
     <RootNamespace>TheLosers.BH4.RunExperimental</RootNamespace>
   </PropertyGroup>
@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PythonBinder\PythonBinder\PythonBinder.csproj" />
     <ProjectReference Include="..\Xamarin\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp\TheLosers.BH4.XamarinFormsApp.csproj" />
   </ItemGroup>
 

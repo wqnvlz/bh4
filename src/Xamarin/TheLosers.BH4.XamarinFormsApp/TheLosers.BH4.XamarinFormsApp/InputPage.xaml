@@ -17,13 +17,13 @@
                 <Entry x:Name="BinInput1" 
                    Placeholder="Bin 1" 
                        ClearButtonVisibility="WhileEditing" Margin="25,20,95,0"/>
-                <Entry x:Name="BinInput1" 
+                <Entry x:Name="BinInput2" 
                    Placeholder="Bin 1" 
                        ClearButtonVisibility="WhileEditing" Margin="25,0,95,0"/>
-                <Entry x:Name="BinInput1" 
+                <Entry x:Name="BinInput3" 
                    Placeholder="Bin 1" 
                        ClearButtonVisibility="WhileEditing" Margin="25,0,95,0"/>
-                <Entry x:Name="BinInput1" 
+                <Entry x:Name="BinInput4" 
                    Placeholder="Bin 1" 
                        ClearButtonVisibility="WhileEditing" Margin="25,0,95,0"/>
             </StackLayout>

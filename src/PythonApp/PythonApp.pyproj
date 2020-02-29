@@ -38,7 +38,7 @@
     <Compile Include="ultrasonic.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="constants.py" />
+    <Compile Include="constants.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.7" />

@@ -1,6 +1,4 @@
-﻿using System;
-
-using TheLosers.BH4.XamarinApp;
+﻿using PythonBinder;
 
 namespace TheLosers.BH4.RunExperimental
 {
@@ -8,12 +6,15 @@ namespace TheLosers.BH4.RunExperimental
     {
         public static void Main()
         {
-            int i = 0;
-            Sockets.RunClient(Sockets.HOST, Sockets.PORT, (socket, str) => {
-                Console.WriteLine(str);
-                return str;
-            }, default);
+            Class1.Main();
+
+            //int i = 0;
+            //Sockets.RunClient(Sockets.HOST, Sockets.PORT, (socket, str) => {
+            //    Console.WriteLine(str);
+            //    return str;
+            //}, default);
             //Sockets.RunServer(Sockets.HOST, Sockets.PORT, () => i++.ToString(), default);
+
         }
     }
 }
